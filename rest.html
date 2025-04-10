@@ -193,36 +193,7 @@
   <footer>
     <p>&copy; 2025 Delish Dine | Follow us on Instagram & Facebook</p>
   </footer>
-  <script>
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('.fade');
   
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const sectionBottom = section.getBoundingClientRect().bottom;
-        const windowHeight = window.innerHeight;
-  
-        // Calculate opacity based on the section's position relative to the viewport
-        const fadeStart = windowHeight * 0.2;  // Start fading when section is 20% in view
-        const fadeEnd = windowHeight * 0.8;    // Fully fade when 80% out of view
-  
-        if (sectionBottom <= fadeStart) {
-          // Section is fully out of view (top is completely out of view)
-          section.style.opacity = '0';
-        } else if (sectionTop >= fadeEnd) {
-          // Section is still in full view
-          section.style.opacity = '1';
-        } else {
-          // Calculate the opacity between 0 and 1 as the section scrolls
-          const opacity = 1 - (Math.min(sectionTop, sectionBottom) / windowHeight);
-          section.style.opacity = opacity;
-        }
-      });
-    });
-  </script>
-  
-
-</script>
 
   
 </body>

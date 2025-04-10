@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delish Dine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: url("4.jpg") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      transition: opacity 0.3s ease-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-item {
+      background: #f8f8f8;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    
+    footer {
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 2rem;
+      
+    }
+    .dish-photo {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.fade {
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .menu {
+    grid-template-columns: 1fr; /* Stack dishes vertically */
+  }
+
+  .menu-item {
+    text-align: center;
+  }
+
+  .gallery img {
+    height: 150px;
+  }
+
+  iframe {
+    height: 150px;
+  }
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="hero" class="fade">
+    <h1>Welcome to Delish Dine</h1>
+  </header>
+
+  <section id="about" class="fade">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      At Delish Dine, we don’t just serve food — we serve experiences. From handpicked ingredients to heartfelt recipes, every dish carries a touch of home and a dash of elegance.
+    </p>
+  
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; align-items: center;">
+      <img src="chef.jpg" alt="Our Chef" style="flex: 1; max-width: 400px; border-radius: 10px;">
+      <div style="flex: 2;">
+        <p>
+          Our head chef, with over 15 years of culinary artistry, crafts meals that blend tradition with innovation. Whether it's a cozy dinner or a family gathering, we pour passion into every plate.
+        </p>
+        <p>
+          Our restaurant ambiance combines rustic charm with modern comfort, making every visit memorable. We value not just great taste, but great service too.
+        </p>
+      </div>
+    </div>
+  
+    <img src="restaurant.jpg" alt="Our Restaurant Interior" style="margin-top: 2rem; width: 100%; border-radius: 10px;">
+  </section>
+
+  <section id="menu" class="fade">
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="menu-item">
+        <h3>Grilled Chicken</h3>
+        <img src="11.jpg" alt="Grilled Chicken" class="dish-photo">
+        <p>Juicy grilled chicken, marinated with herbs and served with seasonal vegetables that bring out its rich flavor.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Veggie Pasta</h3>
+        <img src="22.jpg" alt="Veggie Pasta" class="dish-photo">
+        <p>Colorful garden vegetables tossed in fresh homemade pasta — a hearty and healthy vegetarian delight.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Cheesecake</h3>
+        <img src="33.jpg" alt="Cheesecake" class="dish-photo">
+        <p>Rich and creamy cheesecake on a buttery graham cracker crust. The perfect sweet ending to your meal.</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section id="contact" class="fade">
+    <h2>Contact Us</h2>
+    <p>📍 123 Flavor Street, Taste Town</p>
+    <p>📞 (123) 456-7890</p>
+    <p>📧 contact@delishdine.com</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.2487226833!2d-74.0060152!3d40.7127281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQyJzQ1LjgiTiA3NMKwMDMnMDIuMyJX!5e0!3m2!1sen!2sus!4v1614648814079!5m2!1sen!2sus" width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Delish Dine | Follow us on Instagram & Facebook</p>
+  </footer>
+  <script>
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.fade');
+  
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = section.getBoundingClientRect().bottom;
+        const windowHeight = window.innerHeight;
+  
+        // Calculate opacity based on the section's position relative to the viewport
+        const fadeStart = windowHeight * 0.2;  // Start fading when section is 20% in view
+        const fadeEnd = windowHeight * 0.8;    // Fully fade when 80% out of view
+  
+        if (sectionBottom <= fadeStart) {
+          // Section is fully out of view (top is completely out of view)
+          section.style.opacity = '0';
+        } else if (sectionTop >= fadeEnd) {
+          // Section is still in full view
+          section.style.opacity = '1';
+        } else {
+          // Calculate the opacity between 0 and 1 as the section scrolls
+          const opacity = 1 - (Math.min(sectionTop, sectionBottom) / windowHeight);
+          section.style.opacity = opacity;
+        }
+      });
+    });
+  </script>
+  
+
+</script>
+
+  
+</body>
+</html>
